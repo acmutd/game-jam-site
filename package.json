@@ -1,0 +1,10 @@
+{
+  "name": "game-jam-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "./node_modules/http-server/bin/http-server"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
