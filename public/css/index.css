@@ -306,6 +306,7 @@ footer {
 
     overflow-y: scroll;
     scrollbar-width: none; /* Hide scrollbar Firefox */
+
 }
 
 #questions::-webkit-scrollbar { /* Hide scrollbar WebKit */
@@ -338,11 +339,30 @@ footer {
 
 #questions > div:not(:last-child) {
     margin-bottom: 5vh;
-    
 }
 
 .question {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 1vh;
+    cursor: pointer;
+}
+
+.question:after {
+    content: '\002B';
+    color: var(--orange-color);
+    font-weight: bold;
+    font-size: 2rem;
+    float: right;
+    margin-left: 5px;
+}
+  
+.question-active:after {
+    content: '\2212';
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
