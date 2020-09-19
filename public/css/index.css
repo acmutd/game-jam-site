@@ -58,7 +58,7 @@ nav > a:last-child {
 
 main {
     flex: 1 1 auto;
-    margin: 0 7vw;
+    margin: 0 10vw;
 }
 
 section {
@@ -305,6 +305,11 @@ footer {
 #questions::-webkit-scrollbar { /* Hide scrollbar WebKit */
     width: 0;
     height: 0;
+}
+
+#faq {
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 #faq-title {
