@@ -275,6 +275,12 @@ footer {
     min-width: 20vw;
     min-height: 45vh;
     margin-right: 3vw;
+    margin-bottom: 10vh;
+}
+
+.shift-down {
+    margin-top: 5vh;
+    margin-bottom: 0;
 }
 
 .day > .subtitle {
