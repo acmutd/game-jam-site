@@ -30,6 +30,7 @@ a:link, a:visited {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    margin-bottom: 20vh;
 }
 
 nav {
@@ -58,11 +59,10 @@ nav > a:last-child {
 main {
     flex: 1 1 auto;
     margin: 0 7vw;
-    margin-bottom: 10vh;
 }
 
 section {
-    margin-bottom: 10vh;    
+    margin-bottom: 20vh;    
 }
 
 #home {
@@ -85,7 +85,7 @@ section {
     line-height: 3rem;
 }
 
-#register {
+#register-container {
     grid-row: 2;
     grid-column: 1;
 
@@ -94,9 +94,24 @@ section {
     align-items: center;
 }
 
-#register > a > div {
+#register {
     padding: 2vh 3vw;
     font-size: 1.4rem;
+    position: relative;
+}
+
+#wing-left {
+    position: absolute;
+
+    width: 13vw;
+
+    top: 0;
+    left: 0;
+    margin-top: -10%;
+    margin-left: -50%;
+    
+    transform: rotate(-15deg);
+    z-index: -1;
 }
 
 #about-blurb {
@@ -108,6 +123,22 @@ section {
 
     font-size: 1.3rem;
     line-height: 2rem;
+
+    position: relative;
+}
+
+#wing-right {
+    position: absolute;
+
+    width: 15vw;
+
+    top: 0;
+    right: 0;
+    margin-top: -12%;
+    margin-right: -40%;
+
+    transform: rotate(-10deg);
+    z-index: -1;
 }
 
 footer {
@@ -154,6 +185,35 @@ footer {
 #activities-container {
     padding: 3vh 3vw;
     line-height: 2rem;
+    position: relative;
+}
+
+#ear-left {
+    position: absolute;
+
+    width: 10vw;
+
+    top: 0;
+    left: 0;
+    margin-top: -6%;
+    margin-left: -4%;
+
+    transform: rotate(-30deg);
+    z-index: -1;
+}
+
+#ear-right {
+    position: absolute;
+
+    width: 10vw;
+
+    top: 0;
+    right: 0;
+    margin-top: -7%;
+    margin-right: -5%;
+
+    transform: rotate(25deg);
+    z-index: -1;
 }
 
 #activities-header {
@@ -177,6 +237,24 @@ footer {
     padding: 0 3vw;
 }
 
+#schedule-title {
+    position: relative;
+}
+
+#vlad-head {
+    position: absolute;
+
+    width: 15vw;
+
+    top: 0;
+    left: 0;
+
+    margin-top: -10%;
+    margin-left: 65%;
+
+    z-index: -1;
+}
+
 #schedule-container {
     display: flex;
     flex-direction: row;
@@ -191,6 +269,10 @@ footer {
     margin-right: 3vw;
 }
 
+.day > .subtitle {
+    margin-bottom: 1vh;
+}
+
 .schedule-tile {
     height: 100%;
 }
@@ -201,6 +283,24 @@ footer {
     max-height: 75vh;
     overflow-y: scroll;
     line-height: 2rem;
+}
+
+#faq-title {
+    position: relative;
+}
+
+#vlad {
+    position: absolute;
+
+    width: 30vw;
+
+    top: 0;
+    left: 0;
+
+    margin-top: -10%;
+    margin-left: 10%;
+
+    z-index: -1;
 }
 
 #questions > div:not(:last-child) {
