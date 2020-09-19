@@ -259,9 +259,16 @@ footer {
 #schedule-container {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
     padding-bottom: 10vh;
     line-height: 2rem;
+
+    overflow-x: scroll;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+#schedule-container::-webkit-scrollbar { /* Hide scrollbar WebKit */
+    width: 0;
+    height: 0;
 }
 
 .day {
@@ -289,8 +296,15 @@ footer {
     padding: 3vh 3vw;
     text-align: left;
     max-height: 75vh;
-    overflow-y: scroll;
     line-height: 2rem;
+
+    overflow-y: scroll;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+#questions::-webkit-scrollbar { /* Hide scrollbar WebKit */
+    width: 0;
+    height: 0;
 }
 
 #faq-title {
