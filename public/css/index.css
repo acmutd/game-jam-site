@@ -6,7 +6,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     color: white;
     font-family: sans-serif;
 }
@@ -365,4 +366,65 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #nav-hero {
+        height: auto;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #home>:not(:last-child) {
+        margin-bottom: 5vh;
+    }
+
+    #titles {
+        line-height: 3.5rem;
+    }
+
+    #activities {
+        flex-direction: column;
+    }
+
+    #wing-right {
+        display: none; /* temp */
+    }
+
+    #schedule-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .shift-down {
+        margin: 0;
+    }
+
+    .day {
+        margin: 0;
+    }
+
+    .day:not(:last-child) {
+        margin-bottom: 5vh;
+    }
+
+    .schedule-tile {
+        /*
+        I spent 30 minutes trying to figure out why these wouldn't take up
+        100% height as was specified. Turns out, it's because of a bug in
+        WebKit that was initially reported over a decade ago.... Fun stuff
+        https://bugs.webkit.org/show_bug.cgi?id=26559 
+        */
+        min-height: inherit;
+    }
+
+    #faq {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
