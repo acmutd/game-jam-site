@@ -276,6 +276,13 @@ footer {
 
 .schedule-tile {
     height: 100%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: gray;
 }
 
 #questions {
