@@ -295,13 +295,36 @@ footer {
 
 .schedule-tile {
     height: 100%;
-    font-size: 3rem;
+    padding: 1rem;
+    text-align: left;
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+
+    /* Temp text styling
     color: black;
+    font-size: 3rem;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: gray;
+    -webkit-text-stroke-color: gray; */
+}
+
+.schedule-tile > .schedule-item:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+
+.schedule-item {
+    line-height: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.schedule-time {
+    color: var(--orange-color);
+    min-width: 20%;
+    margin-right: 1rem;
 }
 
 #questions {
