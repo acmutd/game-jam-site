@@ -466,6 +466,7 @@ footer {
 
     .day {
         margin: 0;
+        min-height: fit-content;
     }
 
     .day:not(:last-child) {
@@ -482,8 +483,21 @@ footer {
         min-height: inherit;
     }
 
+    .schedule-item {
+        margin-bottom: 1rem;
+    }
+
     #faq {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    #partners-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #partners-grid > div {
+        margin-bottom: 1rem;
     }
 }
