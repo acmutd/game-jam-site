@@ -1,6 +1,7 @@
 :root {
-    --orange-color: #FF6A09;
-    --purple-color: #A979F8;
+    --orange-color: hsl(24, 100%, 52%);
+    --purple-color: hsl(263, 90%, 72%);
+    --hover-purple-color: hsl(263, 90%, 65%); 
 }
 
 html, body {
@@ -269,12 +270,22 @@ footer {
     line-height: 2rem;
 
     overflow-x: scroll;
-    scrollbar-width: none; /* Hide scrollbar Firefox */
+    /* Hide scrollbar Firefox */
+    /* scrollbar-width: none;  */
 }
 
-#schedule-container::-webkit-scrollbar { /* Hide scrollbar WebKit */
-    width: 0;
-    height: 0;
+#schedule-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+/* scrollbar handle */
+#schedule-container::-webkit-scrollbar-thumb {
+    background-color: var(--purple-color);
+    border-radius: 8px;
+}
+/* scrollbar handle on hover */
+#schedule-container::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-purple-color);
 }
 
 .day {
@@ -327,20 +338,33 @@ footer {
     margin-right: 1rem;
 }
 
-#questions {
-    padding: 3vh 3vw;
+#questions-container {
+    padding: 3vh 1vw 3vh 3vw;
     text-align: left;
-    max-height: 75vh;
+    height: 75vh;
     line-height: 2rem;
-
-    overflow-y: scroll;
-    scrollbar-width: none; /* Hide scrollbar Firefox */
-
 }
 
-#questions::-webkit-scrollbar { /* Hide scrollbar WebKit */
-    width: 0;
-    height: 0;
+#questions {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+#questions::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* scrollbar handle */
+#questions::-webkit-scrollbar-thumb {
+    background-color: var(--purple-color);
+    border-radius: 8px;
+}
+/* scrollbar handle on hover */
+#questions::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-purple-color);
 }
 
 #faq {
@@ -384,6 +408,7 @@ footer {
     font-size: 2rem;
     float: right;
     margin-left: 5px;
+    margin-right: 1rem;
 }
   
 .question-active:after {
@@ -499,5 +524,13 @@ footer {
 
     #partners-grid > div {
         margin-bottom: 1rem;
+    }
+
+    .question {
+        font-size: 1.2rem;
+    }
+
+    #questions-container {
+        height: auto;
     }
 }
