@@ -98,10 +98,14 @@ section {
     grid-row: 2;
     grid-column: 1;
 
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#link-container > * {
+    width: 60%;
 }
 
 #link-discord {
@@ -111,6 +115,12 @@ section {
 }
 
 #link-youtube {
+    padding: 2vh 3vw;
+    font-size: 1.4rem;
+    margin-bottom: 2vh;
+}
+
+#link-itch {
     padding: 2vh 3vw;
     font-size: 1.4rem;
 }
